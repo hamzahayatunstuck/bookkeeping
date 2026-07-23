@@ -1,13 +1,12 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const port = 3000;
-const dotenv = require('dotenv');
 const connectDb = require('./config/db');
 const authRoutes = require('./routes/authRoutes');
 const bookRoutes = require('./routes/bookRoutes');
 const categoryRoutes = require('./routes/categoryRoutes');
 const libraryRecordsRoutes = require('./routes/libraryRecords');
-dotenv.config()
 connectDb();
 app.use(express.json());
 
